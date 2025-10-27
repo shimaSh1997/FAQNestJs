@@ -6,8 +6,8 @@ import { AppModule } from "./app.module";
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
-  // Configure class-validator to use NestJS's DI container
-  useContainer(app.select(AppModule), { fallbackOnErrors: true });
+  // // Configure class-validator to use NestJS's DI container
+  // useContainer(app.select(AppModule), { fallbackOnErrors: true });
   
   app.useGlobalPipes(
     new ValidationPipe({
